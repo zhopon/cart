@@ -1,6 +1,5 @@
 <div ng-repeat="item in items track by $index" class="media">
-  <carousel>
-  <slide active="true">
+  <div>
     <div class="media-left">
       <a href="#">
         <img class="media-object" ng-src="/images/products/r_{{item.productCode}}.PNG" alt="{{item.productCode}}">
@@ -8,24 +7,28 @@
     </div>
     <div class="media-body">
       <h4 class="media-heading">{{ item.name }}</h4>
-      <dl>
+      <dl class="pull-left">
         <dt>Price</dt>
         <dd>{{ item.price }}</dd>
         <dt>Product code</dt>
         <dd>{{ item.productCode }}</dd>
       </dl>
+      <div class="pull-right">
+        <button type="button" class="btn btn-link btn-lg">
+          <span class="glyphicon glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span>
+        </button>
+      </div>
     </div>
-  </slide>
-  <slide>
-    <div class="media-left">
-      <a href="#">
-        <img class="media-object" ng-src="/images/products/r_{{item.productCode}}.PNG" alt="{{item.productCode}}">
-      </a>
-    </div>
-    <div class="media-body">
-      <h4 class="media-heading">{{ item.name }}</h4>
-      <p>You can find this product cheaper</p>
-    </div>
-  </slide>
-  </carousel>
+  </div>
+  <!-- <div> -->
+    <!-- <div class="media-left"> -->
+      <!-- <a href="#"> -->
+        <!-- <img class="media-object" ng-src="/images/products/r_{{item.productCode}}.PNG" alt="{{item.productCode}}"> -->
+      <!-- </a> -->
+    <!-- </div> -->
+    <!-- <div class="media-body"> -->
+      <!-- <h4 class="media-heading">{{ item.name }}</h4> -->
+      <!-- <p>You can find this product cheaper</p> -->
+    <!-- </div> -->
+  <!-- </div> -->
 </div>
